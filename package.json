@@ -5,16 +5,19 @@
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.1",
-    "@fortawesome/fontawesome-svg-core": "^1.2.32",
-    "@fortawesome/free-solid-svg-icons": "^5.15.1",
-    "@fortawesome/react-fontawesome": "^0.1.12",
+    "@fortawesome/fontawesome-svg-core": "^6.2.0",
+    "@fortawesome/free-regular-svg-icons": "^6.2.0",
+    "@fortawesome/free-solid-svg-icons": "^6.2.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
     "bootstrap": "^4.5.3",
     "dom-to-image": "^2.6.0",
     "font-awesome": "^4.6.3",
+    "install": "^0.13.0",
     "js-yaml": "^3.14.0",
+    "npm": "^8.19.3",
     "prop-types": "^15.7.2",
     "rc-slider": "^9.6.1",
     "react": "^17.0.1",
@@ -32,12 +35,6 @@
     "lint": "eslint -c .eslintrc 'src/**/*.{js,jsx}'",
     "format": "eslint -c .eslintrc 'src/**/*.{js,jsx}' --fix",
     "deploy": "gh-pages -d build"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [

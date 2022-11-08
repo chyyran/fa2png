@@ -26,11 +26,11 @@ const capture = (element) => {
     });
 };
 
-const captureAndDownload = (element) => {
+const captureAndDownload = (iconname, element) => {
   domtoimage.toPng(element)
     .then((dataUrl) => {
       const link = document.createElement('a');
-      link.download = 'image.png';
+      link.download = iconname+'.png';
       link.href = dataUrl;
       link.click();
     })
@@ -44,24 +44,12 @@ const getIconCanvas = () => (
   document.getElementById('icon-canvas')
 );
 
-const CaptureButton = () => (
-  <Dropdown as={ButtonGroup}>
-    <Button onClick={() => capture(getIconCanvas())}>
-      <FontAwesomeIcon icon="magic" />
-      {' '}
-      Capture
-    </Button>
-    <Dropdown.Toggle split />
-    <Dropdown.Menu>
-      <Dropdown.Item eventKey="1">
-        <Button variant="link" onClick={() => captureAndDownload(getIconCanvas())}>
-          <FontAwesomeIcon icon="download" />
-          {' '}
-          Capture & Download
-        </Button>
-      </Dropdown.Item>
-    </Dropdown.Menu>
-  </Dropdown>
+const CaptureButton = ({icon}) => (
+  <Button onClick={() => captureAndDownload(icon, getIconCanvas())}>
+    <FontAwesomeIcon icon="magic" />
+    {' '}
+    Download
+  </Button>
 );
 
 export default CaptureButton;

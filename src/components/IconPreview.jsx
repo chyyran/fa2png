@@ -7,11 +7,11 @@ const IconPreview = ({ icon, size, color }) => (
   <Card>
     <Card.Header>Icon preview</Card.Header>
     <Card.Body>
-      <div id="icon-canvas" className="text-center">
+      <div id="icon-canvas" className="text-center"  style={{ color, width:  `${size}px`, height: `${size}px` }}>
         <FontAwesomeIcon
           id="icon-target"
           icon={icon}
-          style={{ fontSize: `${size}px`, color }}
+          style={{ fontSize: `${size}px`, color, width:  `${size}px`, height: `${size}px` }}
         />
       </div>
     </Card.Body>

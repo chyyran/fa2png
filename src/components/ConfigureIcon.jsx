@@ -16,7 +16,7 @@ const ConfigureIcon = ({
       <IconInput onChange={onIconChange} value={iconValue} />
       <ColorInput onChange={onColorChange} value={colorValue} />
       <SizeInputWithSlider onChange={onSizeChange} value={sizeValue} />
-      <CaptureButton />
+      <CaptureButton icon={iconValue} />
     </Card.Body>
   </Card>
 );
